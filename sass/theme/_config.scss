@@ -1,0 +1,353 @@
+$theme-color:#143A74;
+$blue-color: #1082c1;
+$linear-color: radial-gradient(circle at top left, #0ee5fc, #006197);
+$box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$border-blue-color: #32507d;
+$link-white: #ffffff;
+$text-color: #0f1826;
+$content-color: #333333;
+$transition-time: opacity 0.3s ease-in-out;
+$gray-color: #dee2e6;
+$gray-bg: #f7f7f7;
+
+// Category Header
+@mixin title-feature {
+	border-left: 3px solid $theme-color;
+	padding-left: 0.75rem;
+	line-height: 2;
+	letter-spacing: .01em;
+}
+
+// Single Post Headers
+@mixin title-content-post {
+	font-weight: 600;
+	margin-top: 1.35rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.5;
+}
+
+ul,
+.widget {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	padding: 1rem 0;
+}
+
+// Card Title 
+.card-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 28px;
+	margin-bottom: 0.625rem;
+}
+
+// Card Title Small
+.card-title-sm {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 24px;
+	margin-bottom: 0.625rem;
+}
+
+// Link Hover 
+.card:hover .btn-link {
+	background-size: 100% 6%;
+	color: $blue-color;
+}
+
+// Image Hover 
+.card-img-top,
+article {
+	img {
+		transition: $transition-time;
+	}
+
+	&:hover img {
+		opacity: 0.85;
+	}
+
+	&:hover .btn-link {
+		background-size: 100% 6%;
+		color: $blue-color;
+	}
+}
+
+// Link Animation
+.btn-link {
+	background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+	background-size: 0px 6%;
+	background-repeat: no-repeat;
+	background-position: left 100%;
+	color: $text-color;
+	text-decoration: none;
+	transition-duration: .5s;
+	font-weight: inherit;
+	padding: 0;
+}
+
+.excerpt-text {
+	font-size: 0.875rem;
+}
+
+// Time And Read
+.meta-info {
+	font-size: 0.625rem;
+	font-weight: 600;
+	letter-spacing: 0.01rem;
+}
+
+// Primary Category
+.post-primary-category a {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 26px;
+	padding: 5px 10px;
+	background: $theme-color;
+	color: $link-white;
+	border-radius: 2px;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	transition: all .25s ease-in-out;
+
+	&:hover {
+		background: lighten($theme-color, 10%);
+	}
+}
+
+// Pagination 
+.pagination {
+
+	.page-item {
+		margin: 0 0.5rem;
+
+		.prev, .next {
+			color: $theme-color !important;
+			margin: 0 1rem;
+		}
+		
+		.page-link {
+			display: inline-block;
+			padding: .25rem;
+			height: 2rem;
+			line-height: 1.25em;
+			text-align: center;
+			color: $text-color;
+			font-size: 1.125rem;
+			border: none;
+
+			&:hover, &:focus {
+				background: transparent;
+				color: $text-color;
+				box-shadow: none;
+			}
+
+			.current {
+				border: 1px solid darken($blue-color, 30%);
+				border-radius: 50%;
+				min-width: 2rem;
+				margin: 0;
+			}
+		}
+
+		&.active .page-link {
+			border: 1px solid $theme-color;
+			border-radius: 10rem;
+			background: transparent;
+			color: $theme-color;
+			min-width: 2rem;
+			margin: 0;
+			transition: all .15s ease-in-out;
+
+			&:hover {
+				background: $theme-color;
+				color: $link-white;
+			}
+		}
+	}
+}
+
+// Share Buttons 
+.share-buttons {
+	.share-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 100px;
+		width: 170px;
+		border-radius: 2px;
+		background-color: #1a6dd4;
+		box-shadow: $box-shadow;
+		color: $link-white;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		line-height: 38px;
+		text-decoration: none;
+		transition: all .25s ease-in-out; 
+		
+		&:hover {
+			opacity: 0.9;
+		}
+
+		.fa {
+			font-size: 1.125rem;
+		}
+
+		.label {
+			margin-left: 11px;
+			font-size: 13px;
+			font-weight: 600;
+		}
+
+	}
+
+	.share-twitter {
+		background: #55acef;
+	}
+
+	.share-linkedin {
+		background: #02669a;
+	}
+
+	.share-pinterest {
+		background: #e4223e;
+	}
+}
+
+// Recent Post Height
+.recent-post-height {
+	height: 60px;
+
+	h2 {
+		font-size: 0.938rem;
+		font-weight: 500;
+	}
+}
+
+// Media 
+.media {
+	font-size: 0.938rem;
+	position: relative;
+
+	h5 {
+		font-size: 1rem;
+		text-decoration: none;
+	}
+}
+
+// Box Section Home Page
+.section-box {
+	border-top: 3px solid $text-color;
+	border-bottom: 1px solid $gray-color;
+	padding: 0.875rem 0;
+
+	.section-title {
+		font-size: 1.25rem;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	a {
+		font-size: 0.875rem;
+	}
+}
+
+// Min Post
+.min-post {
+	height: 80px;
+
+	.media-img {
+		width: 80px;
+		transition: $transition-time;
+	}
+
+	&:hover .media-img {
+		opacity: 0.85;
+	}
+
+	&:hover .btn-link {
+		background-size: 100% 6%;
+		color: $blue-color;
+	}
+
+	.media-title {
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 1.43;
+		margin-bottom: 0.625;
+	}
+}
+
+// Header With Underline
+.header-underline {
+	margin-bottom: 26px;
+	padding-bottom: 13px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 40px;
+		height: 2px;
+		background: $linear-color;
+	}
+
+	.heading {
+		font-size: 1.063rem;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 0.02rem;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+}
+
+// Newsletter
+.tnp-subscription {
+	margin: 1.5rem auto !important;
+
+	form {
+		background: $theme-color;
+		border-radius: 0.25rem;
+		color: $link-white;
+		padding: 2rem;
+	}
+
+	.tnp-submit {
+		background: $gray-bg !important;
+		color: $theme-color !important;
+		max-width: 100% !important;
+	}
+}
+
+
+// Media Query Mixins
+@mixin mediaSm {
+	@media screen and (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin mediaMd {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mediaLg {
+	@media screen and (min-width: 769px) and (max-width: 1170px) {
+		@content;
+	}
+}
+
+@mixin mediaXl {
+	@media screen and (max-width: 1171px) {
+		@content;
+	}
+}
