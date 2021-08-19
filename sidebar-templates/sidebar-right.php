@@ -22,16 +22,15 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="col-lg-4 widget-area" id="right-sidebar" role="complementary">
 <?php endif; ?>
 
-	<?php get_template_part( 'sidebar-templates/side', 'ads' ); ?>
+	<?php dynamic_sidebar( 'sidebare-ads1' ); ?>
 
 	<?php dynamic_sidebar( 'right-sidebar' ); ?>
 
-	<?php get_template_part( 'sidebar-templates/sidecustom', 'ads' ); ?>
+	<?php dynamic_sidebar( 'sidebare-custom-ads' ); ?>
 
 	<?php dynamic_sidebar( 'subscribe' ); ?>
 
-	<?php get_template_part( 'sidebar-templates/long', 'ads' ); ?>
+	<?php dynamic_sidebar( 'sidebare-long-ads' ); ?>
 
 </div><!-- #right-sidebar -->
-
 

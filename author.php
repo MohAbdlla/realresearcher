@@ -17,7 +17,7 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php get_template_part( 'sidebar-templates/top', 'ads' ); ?>
+		<?php dynamic_sidebar( 'top-homeads' ); ?>
 
 		<div class="row">
 
@@ -69,7 +69,7 @@ get_header();
 					endwhile;
 					?>
 
-					<?php get_template_part( 'sidebar-templates/bottom', 'ads' ); ?>
+					<?php dynamic_sidebar( 'bottom-ads' ); ?>
 
 				<?php else: 
 				

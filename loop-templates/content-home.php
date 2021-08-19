@@ -168,8 +168,10 @@ $url_home = get_home_url();
 
 <?php endif; wp_reset_postdata(); ?>
 
-<!-- Google Ads  add pb-5-->
-<div class="home-ads pb-0"></div>
+<!-- Google Ads -->
+<div class="container">
+    <?php dynamic_sidebar( 'between-ads' ); ?>
+</div>
 
 <!-- Politics Section -->
 <?php 
@@ -290,7 +292,7 @@ $url_home = get_home_url();
     if ( $sciences->have_posts() ) :
 ?>
 
-    <section class="pb-5 pt-4 mb-5 bg-primary sciences-section text-white">
+    <section class="pb-5 pt-4 bg-primary sciences-section text-white">
         
         <div class="container">
 
@@ -331,8 +333,10 @@ $url_home = get_home_url();
 
 <?php endif; wp_reset_postdata(); ?>
 
-<!-- Google Ads  add pb-5-->
-<div class="home-ads pb-0"></div>
+<!-- Google Ads -->
+<div class="container">
+    <?php dynamic_sidebar( 'between-ads' ); ?>
+</div>
 
 <!-- three Section -->
 <div class="container">
@@ -630,9 +634,9 @@ $url_home = get_home_url();
 
     </section>
 
-    <div class="container">
-        <?php get_template_part( 'sidebar-templates/bottom', 'ads' );  ?>
-    </div>
-
-
 <?php endif; wp_reset_postdata(); ?>
+
+<div class="container">
+    <?php dynamic_sidebar( 'bottom-ads' ); ?>
+</div>
+

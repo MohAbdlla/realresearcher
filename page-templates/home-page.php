@@ -14,7 +14,7 @@ get_header();
 <div class="wrapper" id="home-wrapper">
 
 	<div class="container">
-		<?php get_template_part( 'sidebar-templates/top', 'ads' ) ; ?>
+		<?php dynamic_sidebar( 'top-homeads' ); ?>
 	</div>
 
 	<main class="site-main" id="home-page">

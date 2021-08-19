@@ -15,7 +15,7 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">	
 
-		<?php get_template_part( 'sidebar-templates/top', 'ads' ); ?>
+		<?php dynamic_sidebar( 'top-homeads' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -55,7 +55,7 @@ get_header();
 							?>
 						</div>
 
-						<?php get_template_part( 'sidebar-templates/bottom', 'ads' ); ?>
+						<?php dynamic_sidebar( 'bottom-ads' ); ?>
 
 						<!-- The pagination component -->
 						<?php understrap_pagination(); ?>

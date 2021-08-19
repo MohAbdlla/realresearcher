@@ -146,5 +146,77 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Top Ads Sidebar', 'understrap' ),
+				'id'            => 'sidebare-ads1',
+				'description'   => __( 'Please Add Top Sidebar Ads Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s sidebar__ads mb-5">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Sidebar Custom Ads', 'understrap' ),
+				'id'            => 'sidebare-custom-ads',
+				'description'   => __( 'Please Custom Sidebar Ads Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s custom__ads mb-5">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Long Ads Sidebar', 'understrap' ),
+				'id'            => 'sidebare-long-ads',
+				'description'   => __( 'Please Add Top Sidebar Ads Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s long__ads mb-5 d-none d-lg-block">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Top Ads Home Page', 'understrap' ),
+				'id'            => 'top-homeads',
+				'description'   => __( 'Please Add Top Ads In Home Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s top-home d-flex justify-content-center align-items-center mb-4 pb-2">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Bottom Custom Ads', 'understrap' ),
+				'id'            => 'bottom-ads',
+				'description'   => __( 'Please Bottom Custom Ads 970 X 100', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s py-3">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Home Page Ads Between Section', 'understrap' ),
+				'id'            => 'between-ads',
+				'description'   => __( 'Please Responsive Ads Between Section For Home Page Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s home-between pb-5">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
 	}
 } // End of function_exists( 'understrap_widgets_init' ).
