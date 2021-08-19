@@ -22,7 +22,7 @@ function post_social_sharing_buttons($content) {
 		$postThumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
  
 		// Construct sharing URL without using any script
-		$twitterURL = 'https://twitter.com/intent/tweet?text='.$postTitle.'&amp;url='.$postURL.'&amp;via=thenewscrypto';
+		$twitterURL = 'https://twitter.com/intent/tweet?text='.$postTitle.'&amp;url='.$postURL.'&amp;via=realresearcher.com/media';
 		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$postURL;
 		$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$postURL.'&amp;title='.$postTitle;
     $pinterestURL = 'https://pinterest.com/pin/create/button/?url='.$postURL.'&amp;media='.$postThumbnail[0].'&amp;description='.$postTitle;

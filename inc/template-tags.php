@@ -78,7 +78,7 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				esc_html__( 'Edit %s', 'understrap' ),
+				esc_html__( 'Edit Post %s', 'understrap' ),
 				the_title( '<span class="sr-only">"', '"</span>', false )
 			),
 			'<span class="edit-link">',
