@@ -14,7 +14,11 @@ get_header();
 <div class="wrapper" id="home-wrapper">
 
 	<div class="container">
-		<?php dynamic_sidebar( 'top-homeads' ); ?>
+		
+		<?php if(is_active_sidebar('top-homeads')) : ?>
+			<?php dynamic_sidebar( 'top-homeads' ); ?>
+		<?php endif; ?>
+		
 	</div>
 
 	<main class="site-main" id="home-page">

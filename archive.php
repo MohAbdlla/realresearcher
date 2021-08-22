@@ -16,7 +16,10 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php dynamic_sidebar( 'top-homeads' ); ?>
+		<?php if(is_active_sidebar('top-homeads')) : ?>
+			<?php dynamic_sidebar( 'top-homeads' ); ?>
+		<?php endif; ?>
+		
 
 		<?php if ( have_posts() ) : ?>
 
@@ -49,8 +52,10 @@ get_header();
 					</div>
 
 					<?php 
-					
-						dynamic_sidebar( 'bottom-ads' );
+
+								if(is_active_sidebar('bottom-ads')) {
+									dynamic_sidebar( 'bottom-ads' );
+								}
 
 						// Display the pagination component.
 						understrap_pagination();

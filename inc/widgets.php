@@ -124,30 +124,6 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Subscribe Newsletter', 'understrap' ),
-				'id'            => 'subscribe',
-				'description'   => __( 'Subscribe widget area', 'understrap' ),
-				'before_widget' => '<aside id="%1$s" class="widget subscribe-widget %2$s mb-5">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title border-bottom">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Footer Full', 'understrap' ),
-				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes py-3 py-lg-5">',
-				'after_widget'  => '</div><!-- .footer-widget -->',
-				'before_title'  => '<h3 class="widget-title text-white mb-4">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
 				'name'          => __( 'Top Ads Sidebar', 'understrap' ),
 				'id'            => 'sidebare-ads1',
 				'description'   => __( 'Please Add Top Sidebar Ads Here', 'understrap' ),
@@ -196,6 +172,18 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
+				'name'          => __( 'Home Page Ads Between Section', 'understrap' ),
+				'id'            => 'between-ads',
+				'description'   => __( 'Please Responsive Ads Between Section For Home Page Here', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s home-between pb-5">',
+				'after_widget'  => '</div>',
+				'before_title'  => '',
+				'after_title'   => '',
+			)
+		);
+
+		register_sidebar(
+			array(
 				'name'          => __( 'Bottom Custom Ads', 'understrap' ),
 				'id'            => 'bottom-ads',
 				'description'   => __( 'Please Bottom Custom Ads 970 X 100', 'understrap' ),
@@ -208,13 +196,25 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Home Page Ads Between Section', 'understrap' ),
-				'id'            => 'between-ads',
-				'description'   => __( 'Please Responsive Ads Between Section For Home Page Here', 'understrap' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s home-between pb-5">',
-				'after_widget'  => '</div>',
-				'before_title'  => '',
-				'after_title'   => '',
+				'name'          => __( 'Subscribe Newsletter', 'understrap' ),
+				'id'            => 'subscribe',
+				'description'   => __( 'Subscribe widget area', 'understrap' ),
+				'before_widget' => '<aside id="%1$s" class="widget subscribe-widget %2$s mb-5">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title border-bottom">',
+				'after_title'   => '</h3>',
+			)
+		);
+
+		register_sidebar(
+			array(
+				'name'          => __( 'Footer Full', 'understrap' ),
+				'id'            => 'footerfull',
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes py-3 py-lg-5">',
+				'after_widget'  => '</div><!-- .footer-widget -->',
+				'before_title'  => '<h3 class="widget-title text-white mb-4">',
+				'after_title'   => '</h3>',
 			)
 		);
 

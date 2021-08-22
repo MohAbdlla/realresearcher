@@ -15,7 +15,9 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php dynamic_sidebar( 'top-homeads' ); ?>
+		<?php if(is_active_sidebar('top-homeads')) : ?>
+			<?php dynamic_sidebar( 'top-homeads' ); ?>
+		<?php endif; ?>
 		
 		<main class="site-main">
 
@@ -52,7 +54,9 @@ get_header();
 							<?php get_template_part( 'loop-templates/content', 'single' );
 							
 								// get Ads
-								dynamic_sidebar( 'bottom-ads' ); 
+								if (is_active_sidebar( 'bottom-ads' )) {
+									dynamic_sidebar( 'bottom-ads' ); 
+								}
 				
 								// Get Related post
 								get_template_part( 'loop-templates/related', 'posts' );

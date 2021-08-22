@@ -170,7 +170,11 @@ $url_home = get_home_url();
 
 <!-- Google Ads -->
 <div class="container">
-    <?php dynamic_sidebar( 'between-ads' ); ?>
+
+    <?php if(is_active_sidebar('between-ads')) : ?>
+        <?php dynamic_sidebar( 'between-ads' ); ?>
+    <?php endif; ?>
+    
 </div>
 
 <!-- Politics Section -->
@@ -335,7 +339,11 @@ $url_home = get_home_url();
 
 <!-- Google Ads -->
 <div class="container">
-    <?php dynamic_sidebar( 'between-ads' ); ?>
+
+    <?php if(is_active_sidebar('between-ads')) : ?>
+        <?php dynamic_sidebar( 'between-ads' ); ?>
+    <?php endif; ?>
+
 </div>
 
 <!-- three Section -->
@@ -637,6 +645,10 @@ $url_home = get_home_url();
 <?php endif; wp_reset_postdata(); ?>
 
 <div class="container">
-    <?php dynamic_sidebar( 'bottom-ads' ); ?>
+
+    <?php if(is_active_sidebar('bottom-ads')) : ?>
+        <?php dynamic_sidebar( 'bottom-ads' ); ?>
+    <?php endif; ?>
+
 </div>
 
